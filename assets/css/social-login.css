@@ -1,0 +1,287 @@
+/**
+ * Social Login Styles
+ */
+
+/* Social Login Buttons */
+.social-login {
+    margin: 20px 0;
+}
+
+.social-login-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-login-divider::before,
+.social-login-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.social-login-divider span {
+    padding: 0 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.social-login-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-login-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: white;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.social-login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-login-btn i {
+    font-size: 18px;
+}
+
+.social-login-btn.facebook {
+    background: #1877f2;
+    color: white;
+    border-color: #1877f2;
+}
+
+.social-login-btn.facebook:hover {
+    background: #166fe5;
+    color: white;
+}
+
+.social-login-btn.google {
+    background: white;
+    color: #333;
+    border-color: #e9ecef;
+}
+
+.social-login-btn.google:hover {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.social-login-btn.phone {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.social-login-btn.phone:hover {
+    background: #218838;
+    color: white;
+}
+
+/* Phone OTP Modal */
+.phone-otp-modal .modal-body {
+    padding: 30px;
+}
+
+.phone-input-group {
+    margin-bottom: 20px;
+}
+
+.phone-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.phone-input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.phone-input-group input:focus {
+    outline: none;
+    border-color: #2f80ed;
+}
+
+.otp-input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: #2f80ed;
+    box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.otp-timer {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.otp-timer.expired {
+    color: #dc3545;
+}
+
+.resend-otp-btn {
+    background: none;
+    border: none;
+    color: #2f80ed;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.resend-otp-btn:hover {
+    color: #1e6fd9;
+}
+
+.resend-otp-btn:disabled {
+    color: #999;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+/* Phone Registration Form */
+.phone-register-form {
+    display: none;
+}
+
+.phone-register-form.show {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2f80ed;
+}
+
+/* Success Message */
+.success-message {
+    background: #d1e7dd;
+    color: #0f5132;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.success-message i {
+    margin-right: 10px;
+}
+
+/* Error Message */
+.error-message {
+    background: #f8d7da;
+    color: #842029;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.error-message i {
+    margin-right: 10px;
+}
+
+/* Loading State */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .social-login-buttons {
+        flex-direction: column;
+    }
+    
+    .social-login-btn {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,249 @@
+/* Quick View Modal Styles */
+.quick-view-modal {
+    --bs-modal-bg: #fff;
+    --bs-modal-border-radius: 12px;
+}
+
+.quick-view-modal .modal-header {
+    background: linear-gradient(135deg, #c9a050 0%, #dbb970 100%);
+    color: white;
+    border: none;
+    padding: 20px;
+}
+
+.quick-view-modal .modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.quick-view-modal .modal-body {
+    padding: 30px;
+}
+
+.quick-view-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.quick-view-image {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.quick-view-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.quick-view-details h4 {
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.quick-view-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.quick-view-rating .stars {
+    color: #ffc107;
+}
+
+.quick-view-rating .review-count {
+    color: #999;
+    font-size: 14px;
+}
+
+.quick-view-price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.quick-view-price .original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+.quick-view-price .sale-price {
+    color: #c9a050;
+}
+
+.quick-view-price .discount-badge {
+    background: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.quick-view-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.quick-view-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.quick-view-quantity label {
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.quick-view-quantity .quantity-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.quick-view-quantity .quantity-input button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-view-quantity .quantity-input button:hover {
+    background: #e9ecef;
+}
+
+.quick-view-quantity .quantity-input input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.quick-view-stock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.quick-view-stock.in-stock .stock-badge {
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.quick-view-stock.out-of-stock .stock-badge {
+    background: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.quick-view-actions {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.quick-view-actions button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quick-view-actions .btn-add-cart {
+    background: linear-gradient(135deg, #c9a050 0%, #dbb970 100%);
+    color: white;
+}
+
+.quick-view-actions .btn-add-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(201, 160, 80, 0.4);
+}
+
+.quick-view-actions .btn-add-wishlist {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.quick-view-actions .btn-add-wishlist:hover {
+    background: #e9ecef;
+    border-color: #999;
+}
+
+.quick-view-actions .btn-add-wishlist.active {
+    background: #ffebee;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.quick-view-details .product-features {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.quick-view-details .product-features ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #666;
+}
+
+.quick-view-details .product-features li {
+    margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+    .quick-view-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .quick-view-modal .modal-body {
+        padding: 20px;
+    }
+
+    .quick-view-actions {
+        flex-direction: column;
+    }
+
+    .quick-view-details h4 {
+        font-size: 20px;
+    }
+
+    .quick-view-price {
+        font-size: 20px;
+    }
+}
